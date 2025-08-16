@@ -29,7 +29,7 @@ class MainApp(App):
             ['7', '8', '9', '/'],
             ['4', '5', '6', '*'],
             ['1', '2', '3', '-'],
-            ['0', '.', 'C', '+']
+            ['0', '.', '⌫', '+']
         ]
 
         for row in buttons:
@@ -66,8 +66,10 @@ class MainApp(App):
         current = self.solution.text
         button_text = instance.text
 
-        if button_text == 'C':
-            self.solution.text = ''
+        if button_text == '⌫':
+            self.solution.text = current[:-1]
+        elif button_text == '.' and '.' in current.split(self.operators[-1])[-1]:
+            return
         else:
             if current and (self.last_was_operator and button_text in self.operators):
                 return
