@@ -87,6 +87,8 @@ class MainApp(App):
                 self.solution.text = solution
             except ZeroDivisionError as e:
                 self.solution.text = 'Cannot divide by zero'
+            except Exception as e:
+                self.solution.text = 'Error'
 
 # CALLING MAIN FUNCTION
 if __name__ == '__main__':
