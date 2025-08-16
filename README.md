@@ -9,7 +9,7 @@ A simple calculator app built using the **Kivy** framework in Python. This app a
 - Basic arithmetic operations: `+`, `-`, `*`, `/`
 - Error handling for invalid expressions and division by zero
 - Read-only input box to prevent direct text editing
-- Clear (`C`) button to reset the screen
+- Clear (`⌫`) button to backspace the screen
 - Built with Kivy – cross-platform GUI library
 
 ---
